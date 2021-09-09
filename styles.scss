@@ -20,8 +20,25 @@ body {
   background-color: whitesmoke;
 }
 
+button {
+  appearance: none;
+  background-color: hsl(180, 100%, 25%);
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.15s;
+
+  &:hover {
+    background-color: hsl(180, 100%, 20%);
+  }
+}
+
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2.5%;
 }
@@ -46,8 +63,28 @@ nav {
 
 main.main {
   min-height: calc(100vh - 70px);
-  border: 1px solid red;
   @include flex();
+  // flex-direction: column;
+
+  .arrow {
+    font-size: 5rem;
+    margin: 0 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.original-image {
+  max-width: 300px;
+  @include flex(column);
+
+  img {
+    width: 100%;
+  }
 }
 
 .puzzle-box {
@@ -55,7 +92,12 @@ main.main {
   min-width: 350px;
   min-height: 350px;
   max-height: 500px;
-  border: 1px solid black;
+  border-radius: 3px;
+  border: 6px solid grey;
+
+  &.done {
+    border: 6px solid rgb(23, 201, 23);
+  }
 }
 
 .images-container {
@@ -66,19 +108,30 @@ main.main {
 
   & > div {
     height: 25%;
-    width: 24%;
-    padding: 5px;
+    width: 25%;
     transition: 0.25s;
+    @include flex();
   }
 
   .img {
     height: 100%;
     width: 100%;
-
+    padding: 2px;
+    cursor: move;
     transition: 0.25s;
 
     &.over {
       opacity: 0.2;
     }
   }
+}
+
+.done-message {
+  @include flex();
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  display: none;
 }

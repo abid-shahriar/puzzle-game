@@ -24,8 +24,25 @@
       </div>
     </nav>
     <main class="container main">
-      <div class="puzzle-box">
-        <div class="images-container" id="images-container"></div>
+      <div class="original-image">
+        <p>Original</p>
+        <img src="/images/minion-org.jpg" alt="minion org" />
+      </div>
+      <div class="arrow">=></div>
+      <div>
+        <p class="message">Drag & Drop to solve the puzzle</p>
+        <div class="done-message hidden">
+          <p>Well Done!</p>
+          <button id="play-again-btn">Play Agin</button>
+        </div>
+
+        <div class="puzzle-box">
+          <div class="images-container" id="images-container"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem">
+          <button id="shuffle-btn">Shuffle</button>
+        </div>
       </div>
     </main>
   </body>

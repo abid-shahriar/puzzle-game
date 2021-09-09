@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: whitesmoke;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+}
+
+nav {
+  height: 70px;
+  background-color: #cccccc;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+nav .nav-content {
+  padding: 0 2.5%;
+  margin: 0 auto;
+}
+
+nav .nav-content h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+main.main {
+  min-height: calc(100vh - 70px);
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.puzzle-box {
+  max-width: 500px;
+  min-width: 350px;
+  min-height: 350px;
+  max-height: 500px;
+  border: 1px solid black;
+}
+
+.images-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.images-container > div {
+  height: 25%;
+  width: 24%;
+  padding: 5px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.images-container .img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.images-container .img.over {
+  opacity: 0.2;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin flex($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: whitesmoke;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+}
+
+nav {
+  height: 70px;
+  background-color: rgb(204, 204, 204);
+  width: 100%;
+  @include flex();
+  justify-content: flex-start;
+
+  .nav-content {
+    padding: 0 2.5%;
+    margin: 0 auto;
+
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+  }
+}
+
+main.main {
+  min-height: calc(100vh - 70px);
+  border: 1px solid red;
+  @include flex();
+}
+
+.puzzle-box {
+  max-width: 500px;
+  min-width: 350px;
+  min-height: 350px;
+  max-height: 500px;
+  border: 1px solid black;
+}
+
+.images-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & > div {
+    height: 25%;
+    width: 24%;
+    padding: 5px;
+    transition: 0.25s;
+  }
+
+  .img {
+    height: 100%;
+    width: 100%;
+
+    transition: 0.25s;
+
+    &.over {
+      opacity: 0.2;
+    }
+  }
+}
